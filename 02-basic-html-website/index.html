@@ -27,6 +27,129 @@
       text-align: center;
       margin-top: 100px; 
     }
+
+    .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0;
+            border: 2px solid #333;
+            margin: 40px 0;
+        }
+
+        .content-grid > div {
+            border-right: 2px solid #333;
+            padding: 30px;
+        }
+
+        .content-grid > div:last-child {
+            border-right: none;
+        }
+
+        .content-grid h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .content-grid ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-grid ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .content-grid ul li:last-child {
+            border-bottom: none;
+        }
+
+        .work-section {
+            margin-bottom: 30px;
+        }
+
+        .work-section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .work-section p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .work-section a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .work-section a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        .education-section p {
+            margin-bottom: 15px;
+        }
+
+        .education-section ul {
+            list-style: none;
+        }
+
+        .education-section ul li {
+            padding: 3px 0;
+            font-size: 14px;
+        }
+
+        .education-section ul li:before {
+            content: "- ";
+        }
+
+        .reviews {
+            margin: 60px 0;
+        }
+
+        .reviews h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: normal;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .review-card {
+            border: 2px solid #333;
+            border-radius: 20px;
+            padding: 30px;
+            background: white;
+        }
+
+        .review-card p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .review-author {
+            color: #999;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 60px 0 20px;
+            font-family: 'Comic Sans MS', cursive;
+        }
   </style>
 </head>
 <body>
@@ -54,13 +177,90 @@
     </section>
 
     <hr />
-    <section>
+    
+    <div class=" content-grid">
       <!-- Projects -->
+      <div>
+        <h2>Projects</h2>
+        <ul>
+          <li>HTML Only Portfolio</li>
+          <li>Calculator</li>
+          <li>Quiz App</li>
+          <li>Countdown Timer</li>
+          <li>Product Upcoming Page</li>
+        </ul>
+      </div> 
+
       <!-- Work Experience -->
+      <div>
+        <div class="work-section">
+          <h3>roadmap.sh</h3>
+          <p>Solved all the frontend projects</p>
+          <p><a href="#profile">Visit my Profile</a></p>
+        </div>
+
+        <div class="divider"></div>
+
       <!-- OpenSource Work -->
+        <div class="work-section">
+          <h3>OpenSource Work</h3>
+          <p>Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+          <p><a href="#github">Visit my GitHub Profile</a></p>
+        </div>
+      </div>
+
       <!-- Education -->
-      <!-- Reviews from my Teachers -->
+       <div class="education-section">
+          <h2>Education</h2>
+          <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+          <p><strong>Courses I took:</strong></p>
+          <ul>
+              <li>Object Oriented Programming</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Web Engineering</li>
+              <li>Artificial Intelligence</li>
+              <li>Human Computer Interaction</li>
+              <li>Computer Graphics</li>
+              <li>Database Management Systems</li>
+              <li>Distributed Database Systems</li>
+              <li>Discreet Mathematics</li>
+          </ul>
+        </div>
+    </div>
+
+    <!-- Reviews from my Teachers -->
+    <section class="reviews">
+      <h2>Reviews from my Teachers</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <p>John doe was a brilliant student; always stood out with his assignments.</p>
+          <div class="review-author">
+              Jane Doe<br>
+              Assistant Professor
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>John doe was a brilliant student; always stood out with his assignments.</p>
+          <div class="review-author">
+              Jane Doe<br>
+              Assistant Professor
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p>John doe was a brilliant student; always stood out with his assignments.</p>
+          <div class="review-author">
+              Jane Doe<br>
+              Assistant Professor
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer>
+        <p>© all rights reserved 2025</p>
+  </footer>
 </body>
 </html>
